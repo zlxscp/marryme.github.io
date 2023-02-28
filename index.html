@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title><font face="Comic Sans MS,arial,verdana">¿Te casarías conmigo?</font></title>
+	<style>
+		.notification {
+			background-color: #FFFFFF;
+			border: 2px solid #000000;
+			color: #000000;
+			padding: 20px;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: none;
+		}
+
+		.notification.show {
+			display: block;
+		}
+	</style>
+	<script>
+		function showNotification() {
+			document.getElementById("notification").classList.add("show");
+		}
+
+		function hideNotification() {
+			if (confirm("¿Estás segura de que no quieres casarte conmigo?")) {
+				window.location.href = "https://lumiere-a.akamaihd.net/v1/images/eeyore_3_992af934.jpeg";
+			}
+		}
+
+		function acceptProposal() {
+			window.location.href = "https://i.pinimg.com/736x/b7/33/2a/b7332aa7d64e016a468037dcf7baa6c5.jpg";
+		}
+	</script>
+</head>
+<body onload="showNotification();">
+	<div id="notification" class="notification">
+		<h2><font face="Comic Sans MS,arial,verdana">¿Te casarías conmigo?</font></h2>
+		<p><font face="Comic Sans MS,arial,verdana">Por favor, elige una opción:</font></p>
+		<button onclick="acceptProposal();"><font face="Comic Sans MS,arial,verdana">Si</font></button>
+		<button onclick="hideNotification();"><font face="Comic Sans MS,arial,verdana">No</font></button>
+	</div>
+</body>
+</html>
